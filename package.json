@@ -1,17 +1,16 @@
 {
-  "name": "skeleventy",
-  "version": "2.0.0",
-  "description": "Skeleventy - A skeleton boilerplate built with Eleventy",
+  "name": "rocket_hat",
+  "version": "1.0.0",
+  "description": "The home of Rocket Hat",
   "scripts": {
-    "dev": "ELEVENTY_ENV=development npx @11ty/eleventy --config=eleventy.config.js --serve & webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && npx @11ty/eleventy --config=eleventy.config.js"
+    "dev": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --config=eleventy.config.js --serve & webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && npx @11ty/eleventy --config=eleventy.config.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/josephdyer/skeleventy.git"
+    "url": "https://github.com/okadoke/eleventy_blog.git"
   },
-  "author": "Joseph Dyer",
-  "license": "MIT",
+  "author": "Eric Elliott",
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
     "html-minifier": "^4.0.0",
@@ -22,5 +21,8 @@
     "sass-loader": "^8.0.0",
     "tailwindcss": "^1.2.0",
     "vue-template-compiler": "^2.6.10"
+  },
+  "dependencies": {
+    "typeface-nunito-sans": "0.0.72"
   }
 }
