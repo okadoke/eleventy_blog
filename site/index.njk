@@ -6,40 +6,37 @@ body_class: home
 title: Welcome to Rocket Hat
 ---
 
-<main id="main" class="inner-narrow py-10 lg:py-20 flex flex-1 flex-col focus:outline-none" tabindex="-1">
+<main id="main" class="inner py-10 lg:py-20 flex flex-1 flex-col focus:outline-none" tabindex="-1">
 
     <section id="container-centre" class="flex-1" aria-label="Summary and features">
 
-        <h1 class="page-title">{{ title }}</h1>
+        <h1 class="page-title leading-tight mb-0 text-center">{{ title }}</h1>
+        <h2 class="opacity-75 text-center">The internet home of Eric Elliott</h2>
 
-        <div class="content">
+        <div class="mt-20">
           <p>
-            The internet home of Eric Elliott. Here you'll find my projects, blog, resume...things like that.
+            Here you'll find my projects, blog, resume, 
+            and anything else I feel like sharing with the world.
           </p>
-          <h2 class="pb-5 text-gray-500 uppercase tracking wide">Projects</h2>
-          <h3 class="text-gray-800"><a href="https://paybaq.io">Paybaq.io</a></h3>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div class="">
-              <p>
-                Paybaq is an app for tracking shared expenses and calculating who owes who.
-              </p>
-              <p>
-                I built it to help with managing expenses on yearly hiking trips I take with a group of friends, and
-                now it's available to the world! So give it a try, it's free.
-              </p>
-              <p>
-                I also periodically write about its development in my <a href="blog">blog</a>.
-              </p>
-            </div>
-            {# <div class="w-1/2 relative shadow-lg" >
-              <img  data-lazy="/images/paybaq_small.png" alt="Paybaq screenshot" 
-                    class="absolute h-full w-full object-fill"></img>
-            </div> #}
-            <img  data-lazy="/images/paybaq_small.png" alt="Paybaq screenshot" 
-                  class="order-first sm:order-last shadow-xl rounded-lg"></img>
-          </div
+          <h2 class="pt-10 text-gray-500 uppercase tracking wide">Projects</h2>
+          {% include "components/paybaq.njk" %}
         </div>
-
+        <hr class="my-20" />
+        <div class="mt-20">
+          <p><b>Why Rocket Hat?</b> Because my name is too damn common, but also hard to spell correctly,
+          so I found a nonsensical, yet fun, domain name. There are so many variations on the spelling of Elliott, 
+          there's even a poem about it (from the <a href="http://www.elliotclan.com/history/the-name/">Elliot clan</a> website):</p>
+          <pre class="text-sm">
+    The double L and single T
+    Descent from Minto and Wolflee,
+    The double T and single L
+    Mark the old race in Stobs that dwell.
+    The single L and single T
+    The Eliots of St Germains be,
+    But double T and double L,
+    Who they are nobody can tell.
+          </pre>
+        </div>
     </section>
 
 </main>

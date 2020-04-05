@@ -1,11 +1,12 @@
-<nav id="nav" class="nav flex">
+<nav id="nav" class="pt-2 inner flex h-full">
 
-  <ul class="menu flex items-center list-reset text-base">
+  {% include "components/logo.njk" %}
+  <ul class="ml-auto mt-5 flex list-reset text-base">
 
     {% for item in navigation.main %}
-      <li class="level-1 mr-4">
+      <li class="ml-5">
         <a  href="{{ item.url | safe }}" 
-            class="link font-bold text-gray-300 uppercase tracking-wide hover:text-pink-500 active:text-pink-500 {% if page.url == item.url %}active text-pink-500{% endif %}
+            class="link font-bold text-gray-500 uppercase tracking-wide hover:text-pink-500 active:text-pink-500 {% if page.url == item.url %}active text-pink-500{% endif %}
             " {% if page.url == item.url %} aria-current="page" {% endif %}>{{ item.label }}</a>
       </li>
     {% endfor %}

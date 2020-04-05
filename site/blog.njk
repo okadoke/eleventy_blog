@@ -1,65 +1,66 @@
 --- 
 layout: default 
 meta_title: Blog 
-meta_description: Blog page description 
+meta_description: Rocket Hat Blog 
 body_class: blog 
-title: Eric's Blog 
+title: Blog 
 ---
 
-<main id="main" class="main inner flex flex-1 flex-col py-10 lg:py-20 focus:outline-none" tabindex="-1">
-  <section id="container-centre" class="column centre flex-1" aria-label="Blogs">
-    <h1 class="page-title text-3xl md:text-center md:text-5xl mb-16 lg:mb-24 lg:text-6xl">{{ title }}</h1>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<main id="main" class="main flex flex-1 flex-col px-2 pt-10 lg:p-20" tabindex="-1">
+  <section class="flex flex-col items-center">
+    <h1 class="text-4xl font-bold">Rocket Hat Blog</h1>
+    <h2 class="max-w-md font-normal text-center text-gray-600">
+    A blog about software development, and perhaps other topics that I feel like writng about.
+    </h2>
+  </section>
+  <section id="container-centre" class="mt-10 flex-1" aria-label="Blogs">
+    {# <h1 class="page-title text-3xl md:text-center md:text-5xl mb-16 lg:mb-24 lg:text-6xl">{{ title }}</h1> #}
+    <div class="max-w-5xl mx-auto flex flex-wrap">
 
       {% for post in collections.blog %}
 
-        <article class="article-card mb-8 mx-4 flex-1 bg-white overflow-hidden rounded-lg shadow-lg">
-
-          {# featured post image & category #}
-          {% if post.data.featured_image %}
-
-            <a class="featured-image-link block relative overflow-hidden" href="{{ post.url }}">
-              
-              <figure>
-
-                {# the 'data-lazy' attribute will lazy load your images in #}
-                {# the js uses the new Intersection Observer API, see ../modules/lazyload #}
-                {# it's not fully supported in some browsers, so proceed with caution! #}
-                {# the srcset attribute would be a nice addtion here as well...in a future update maybe :) #}
-                <img data-lazy="{{ post.data.featured_image }}" class="block" alt="{{ post.data.image_caption }}">
-              </figure>
-            </a>
-
-          {% endif %}
-
-          <div class="p-8">
-            {# category link #}
-            <ul class="flex flex-wrap">
-
-              {% for item in post.data.tags %}
-
-                {%- if item != "blog" -%}
-
-                  <li class="mr-2">
-                    <span class="inline-block bg-pink-100 text-pink-500 px-2 py-1 text-white text-xxs font-bold rounded-full">{{ item | capitalize }}</span>
-                  </li>
-
-                {%- endif -%}
-
-              {% endfor %}
-
-            </ul>
-            <h2 class="text-2xl mb-6">
-              <a class="block text-purple-900 hover:text-pink-500" href="{{ post.url }}">{{ post.data.title }}</a>
+        <article class="m-3 min-w-64 article-card flex-1 flex flex-col bg-white overflow-hidden rounded-lg shadow-lg">
+          <a class="flex-1" href="{{ post.url }}">
+            {# featured post image & category #}
+            {% if post.data.featured_image %}
+              <div class="featured-image-link block relative overflow-hidden" >
+                <figure>
+                  {# the 'data-lazy' attribute will lazy load your images in #}
+                  {# the js uses the new Intersection Observer API, see ../modules/lazyload #}
+                  {# it's not fully supported in some browsers, so proceed with caution! #}
+                  {# the srcset attribute would be a nice addtion here as well...in a future update maybe :) #}
+                  <img data-lazy="{{ post.data.featured_image }}" class="h-48 object-cover" alt="{{ post.data.image_caption }}">
+                </figure>
+              </div>
+            {% endif %}
+            <h2 class="mx-5 mt-5 text-2xl text-neutral-800">
+              {{ post.data.title }}
             </h2>
-            <div class="text-sm text-gray-600 md:flex mb-4">
-              <p class="author">By
-                {{ site.author.name }}</p>
-              <p class="hidden md:block px-2">—</p>
+          </a>
+
+          <div class="flex-shrink-0">
+            {# category link #}
+            <div class="px-5 text-sm text-gray-600 md:flex">
+              <span class="author">By
+                {{ site.author.name }}</span>
+              <span class="hidden md:block px-2">—</span>
               <time datetime="{{ post.date }}">
                 {{ post.date | dateDisplay }}
               </time>
             </div>
+            <ul class="px-5 pb-5 flex flex-wrap items-baseline">
+              <li class="mr-2 text-xxs">In:</li>
+              {% for item in post.data.tags %}
+                {%- if item != "blog" -%}
+                  <li class="mr-2">
+                    <a href="/category/{{ item }}">
+                      <span class="inline-block text-xxs">{{ item | capitalize }}</span>
+                    </a>
+                  </li>
+                {%- endif -%}
+              {% endfor %}
+
+            </ul>
           </div>
         </article>
 

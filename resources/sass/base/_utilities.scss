@@ -14,9 +14,41 @@
 
 // 'container' helper class
 .inner {
-  @apply w-full max-w-6xl ml-auto mr-auto px-6;
+  @apply w-full max-w-4xl ml-auto mr-auto px-6;
 }
 
 .inner-narrow {
   @apply w-full max-w-4xl mx-auto px-6;
+}
+
+.mask-lighter {
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    )
+}
+
+.mask-light {
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    )
+}
+
+.mask {
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    )
+}
+
+.mask-blog {
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.0),
+      rgba(0, 0, 0, 0.8)
+    )
 }
