@@ -23,6 +23,7 @@
     "vue-template-compiler": "^2.6.10"
   },
   "dependencies": {
-    "typeface-nunito-sans": "0.0.72"
+    "typeface-merriweather": "0.0.72",
+    "typeface-vollkorn": "0.0.72"
   }
 }

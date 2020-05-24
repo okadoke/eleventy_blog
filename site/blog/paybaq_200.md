@@ -34,12 +34,13 @@ Ledger
 
 User
 - LedgerId (many)
+
 ``` 
 
 People often run into problems with Firestore if their data requires joins or complex queries, but data access in Paybaq is simple because each ledger is self-contained, i.e. doesn't need to reference anything outside itself.
 
 The one thing lacking in the above data structures is anything related to balances or repayments. I could have used something like Google's cloud functions to compute repayments when the ledger changed, but I didn't want to have to add in that extra complexity if it wasn't necessary. 
 
-Instead, repayments are computed on the client whenever the ledger changes. I initially had the client write the repayment data to Firestore along with . Technically, someone could modify the javascript to fowl up the data for a Ledger, but they'd only be hurting themselves and their collaborators.
+Instead, repayments are computed on the client whenever the ledger changes. I initially had the client write the repayment data to Firestore, but it seems unnecessary as long as I'm confident the derived values computed on each client are consistent (I'm not entirely sure about this). And, yes, technically, someone could modify the javascript to fowl up the data for a Ledger, but they'd only be hurting themselves and their collaborators, so I'm not too concerned about it.
 
 Some of the important security rules include not being able to get a listing of all Ledgers, both to prevent excessive data read charges, and to prevent someone from accessing Ledgers that they don't have explicit links to.
