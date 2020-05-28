@@ -3,7 +3,7 @@
 
 // headings
 h1, h2, h3 {
-    @apply font-bold leading-tight mt-0 mb-6 text-purple-900;
+    @apply mb-2 font-bold leading-tight text-xl text-gray-900;
 }
 
 .page-title {
@@ -11,16 +11,16 @@ h1, h2, h3 {
 }
 
 p {
-  @apply mb-5
+  @apply mb-2
 }
 // content
-.content>p {
-        // intro paragraph
-		&:first-child {
-			@apply border-b border-gray-200 text-2xl pb-10 mb-10 font-light leading-snug text-gray-600;
+// .content>p {
+//         // intro paragraph
+// 		&:first-child {
+// 			@apply border-b border-gray-200 text-2xl pb-10 mb-10 font-light leading-snug text-gray-600;
 
-			@screen md {
-                @apply text-3xl;
-            }
-		}
-}
+// 			@screen md {
+//                 @apply text-3xl;
+//             }
+// 		}
+// }

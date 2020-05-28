@@ -1,16 +1,21 @@
-<nav id="nav" class="py-2 h-full bg-blue-900">
-  <div class="flex items-center inner">
-    {% include "components/logo.njk" %}
-    <ul class="ml-auto flex list-reset text-base">
+<nav id="nav" class="pt-10 pb-10 h-full">
+  <div class="flex items-start">
+    <div class="px-5 md:px-0 sm:w-40 sm:flex items-center justify-center">
+      {% include "components/logo.njk" %}
+    </div>
+    <div class="pl-0 flex flex-col">
+      <b class="font-bold text-3xl"><a href="/" class="underline-none">Rocket Hat Labs</a></b>
+      <ul class="flex list-reset text-base">
 
-      {% for item in navigation.main %}
-        <li class="ml-5">
-          <a  href="{{ item.url | safe }}" 
-              class="link font-bold text-gray-500 uppercase tracking-wide hover:text-pink-500 active:text-pink-500 {% if page.url == item.url %}active text-pink-500{% endif %}
-              " {% if page.url == item.url %} aria-current="page" {% endif %}>{{ item.label }}</a>
-        </li>
-      {% endfor %}
+        {% for item in navigation.main %}
+          <li class="mr-5">
+            <a  href="{{ item.url | safe }}" 
+                class="link text-sm font-semibold uppercase tracking-wide active:text-black {% if page.url == item.url %}active text-black border-b-2 border-black {% else %} text-gray-600 hover:text-gray-800{% endif %}
+                " {% if page.url == item.url %} aria-current="page" {% endif %}>{{ item.label }}</a>
+          </li>
+        {% endfor %}
 
-    </ul>
+      </ul>
+    </div>
   </div>
 </nav>

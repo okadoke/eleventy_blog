@@ -3,49 +3,46 @@ layout: default
 meta_title: Home
 meta_description: Rocket Hat, the projects of Eric Elliott
 body_class: home
-title: Welcome to Rocket Hat
+title: Rocket Hat Labs
 ---
 
-<main id="main" class="inner py-10 lg:py-20 flex flex-1 flex-col focus:outline-none" tabindex="-1">
-
-    <section id="container-centre" class="flex-1" aria-label="Summary and features">
-
-        <h1 class="page-title leading-tight mb-0 text-center">{{ title }}</h1>
-        <h2 class="opacity-75 text-center">The internet home of Eric Elliott</h2>
-
-        <div class="mt-20">
-          <p>
-            Here you'll find my projects, blog, resume, 
-            and anything else I feel like sharing with the world.
-          </p>
-          <div>
-            <h2 class="pt-10 text-gray-500 uppercase tracking wide">Projects</h2>
-            <div>
-              {% include "components/paybaq.njk" %}
-            </div>
-            <div class="mt-10">
-              {% include "components/wordspy.njk" %}
-            </div>
-          </div>
-        </div>
-        <hr class="my-20" />
-        <div class="mt-20">
-          <p><b>Why Rocket Hat?</b> Because my name is too damn common, but also hard to spell correctly,
-          so I found a nonsensical, yet fun, domain name. There are so many variations on the spelling of Elliott, 
-          there's even a poem about it (from the <a href="http://www.elliotclan.com/history/the-name/">Elliot clan</a> website):</p>
-          <pre class="text-sm">
-    The double L and single T
-    Descent from Minto and Wolflee,
-    The double T and single L
-    Mark the old race in Stobs that dwell.
-    The single L and single T
-    The Eliots of St Germains be,
-    But double T and double L,
-    Who they are nobody can tell.
-          </pre>
-        </div>
-    </section>
-
+<main id="main" class="flex flex-1 flex-col focus:outline-none" tabindex="-1">
+  <section id="container-centre" class="flex-1">
+    <div>
+      <h2 class="pl-2 border-l-4 border-pink-600">What is this place?</h2>
+      <p class="max-w-xl">
+        This is this internet home of Eric Elliott. 
+        Here you'll find my projects, blog, resume, 
+        and anything else I feel like sharing with the world.
+      </p>
+    </div>
+    <div class="mt-20">
+      <a name="projects"></a><h2 class="pl-2 border-l-4 border-pink-600">My Projects</h2>
+      <p>Some personal projects that I've been working on lately.</p>
+      <div class="mt-10">
+        {% include "components/paybaq.njk" %}
+      </div>
+      <div class="mt-10">
+        {% include "components/wordspy.njk" %}
+      </div>
+    </div>
+    <div class="mt-20">
+      <h2 class="pl-2 border-l-4 border-pink-600">Why Rocket Hat?</h2>
+      <p> Because my name is too damn common, but also hard to spell correctly,
+      so I found a nonsensical, yet fun, domain name. There are so many variations on the spelling of Elliott, 
+      there's even a poem about it (from the <a href="http://www.elliotclan.com/history/the-name/" target="_blank">Elliot clan</a> website):</p>
+      <pre class="text-sm">
+The double L and single T
+Descent from Minto and Wolflee,
+The double T and single L
+Mark the old race in Stobs that dwell.
+The single L and single T
+The Eliots of St Germains be,
+But double T and double L,
+Who they are nobody can tell.
+      </pre>
+    </div>
+  </section>
 </main>
 
 

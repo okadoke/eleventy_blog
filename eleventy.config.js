@@ -35,6 +35,7 @@ module.exports = eleventyConfig => {
   // Layout aliases
   eleventyConfig.addLayoutAlias('default', 'layouts/default.njk')
   eleventyConfig.addLayoutAlias('post', 'layouts/post.njk')
+  eleventyConfig.addLayoutAlias('resume', 'layouts/resume.njk')
 
   // Include our static assets
   eleventyConfig.addPassthroughCopy("css")
@@ -45,7 +46,7 @@ module.exports = eleventyConfig => {
 
   return {
     templateFormats: ["md", "njk"],
-    // markdownTemplateEngine: 'njk',
+    markdownTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
     passthroughFileCopy: true,
 

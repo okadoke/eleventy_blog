@@ -1,0 +1,22 @@
+.resume ul {
+  @apply ml-10
+}
+.resume li {
+  @apply list-disc list-outside
+}
+
+.resume h1 {
+  @apply text-4xl font-bold
+}
+.resume h2 {
+  @apply pb-2 mt-10 text-2xl font-bold border-b border-gray-400
+}
+.resume h3 {
+  @apply mt-5 text-lg font-semibold
+}
+.resume h4 {
+  @apply text-base text-gray-600
+}
+.resume h5 {
+  @apply text-base text-gray-600
+}
