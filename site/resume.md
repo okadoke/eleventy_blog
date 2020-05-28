@@ -4,15 +4,15 @@ title: Resume
 ---
 
 # Eric Elliott
-##### 296 Summer St., #3
+#### 296 Summer St., #3
 
-##### Somerville, MA 02144
+#### Somerville, MA 02144
 
-##### ercxyz@gmail.com
+#### ercxyz@gmail.com
 
 ## WORK EXPERIENCE
 
-##### 2007 - Present
+#### 2007 - Present
 **Technology Solutions Experts**, Natick, MA - *Sr. Software Engineer*
 
 - Technical lead for a diverse set of department of defense projects (discussed below)
